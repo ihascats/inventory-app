@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.get('/', function (req, res, next) {
-  res.render('index');
+  res.redirect('/inventory');
 });
 
 router.post('/new-item-create', upload.single('image'), function (req, res) {
