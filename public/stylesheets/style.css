@@ -6,3 +6,84 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background-color: rgb(0 0 0 / 10%);
+}
+
+nav > h1 {
+  font-size: 36px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: hsla(0, 0%, 0%, 0.6);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsla(0, 0%, 0%, 0.9);
+}
+
+form {
+  display: grid;
+  width: 300px;
+  justify-content: center;
+}
+
+form > button {
+  border: none;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 18px;
+  padding: 8px;
+}
+
+form > button:hover {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+form > h1 {
+  margin: 0 0 16px;
+}
+
+form > label {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+form > input,
+select {
+  border: none;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 18px;
+  padding: 8px;
+  outline: none;
+  margin-bottom: 8px;
+  border-bottom: 2px solid black;
+}
+
+form > input:focus {
+  border-bottom: 2px solid green;
+}
+
+.wrapper {
+  padding: 16px;
+}
+
+.wrapper a {
+  color: #0094ff;
+  width: fit-content;
+}
