@@ -7,6 +7,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background: #81ff4385;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -26,15 +30,16 @@ nav > ul {
 
 li {
   list-style: none;
+  width: fit-content;
 }
 
-a {
+nav a {
   color: hsla(0, 0%, 0%, 0.6);
   font-size: 24px;
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   color: hsla(0, 0%, 0%, 0.9);
 }
 
@@ -84,6 +89,55 @@ form > input:focus {
 }
 
 .wrapper a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.link {
   color: #0094ff;
+}
+
+.link-fit-content {
   width: fit-content;
+}
+
+img {
+  width: 300px;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-category {
+  font-size: 18px;
+  background-color: pink;
+  width: fit-content;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-weight: 400;
+}
+
+.product {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 16px 8px;
+  border-radius: 8px;
+}
+
+.product_info {
+  width: 300px;
+}
+
+.wrapper ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(316px, 0));
+  gap: 16px;
+  justify-content: center;
 }

@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+  div(class='wrapper')
+    ul 
+      each item in items
+        li(class='product')
+          a(href=`${item.url}` class='link-fit-content')
+            img(src=`../images/${item.image}`, alt="")
+            div(class='product_info')
+              h1(class='product-price')= `$${item.price}`
+              h2(class='product-name')= item.name
+              h4(class='product-category')= item.category
+
