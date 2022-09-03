@@ -2,7 +2,7 @@ extends layout
 
 block content
   div(class='wrapper')
-    form(action="/new-author", method="post" enctype='multipart/form-data')
+    form(action="/new-item-create", method="post" enctype='multipart/form-data')
       h1 NEW ITEM FORM
       //- 
       label(for="name") NAME
@@ -17,11 +17,11 @@ block content
         option(value="moist") Moist
         option(value="wet") Wet
       //- 
-      label(for='price') PRICE 
-      input(type='number' name='price') 
+      label(for='price') PRICE ($) 
+      input(type='number' name='price' min='0' value='0') 
       //- 
-      label(for='number_in_stock') PRICE 
-      input(type='number' name='number_in_stock') 
+      label(for='number_in_stock') NUMBER IN STOCK
+      input(type='number' name='number_in_stock' min='0' value='0') 
       //- 
       input(type="file" name='image')
       //- 
