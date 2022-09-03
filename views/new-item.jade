@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div(class='wrapper')
+    form(action="/new-author", method="post" enctype='multipart/form-data')
+      h1 NEW ITEM FORM
+      //- 
+      label(for="name") NAME
+      input(type="text" name='name') 
+      //- 
+      label(for="description") DESCRIPTION
+      input(type="text" name='description') 
+      //- 
+      <label for="category">FOOD TYPE</label>
+      <select name="category">
+        <option value="dry">Dry</option>
+        <option value="moist">Moist</option>
+        <option value="wet">Wet</option>
+      </select>
+      //- 
+      label(for='price') PRICE 
+      input(type='number' name='price') 
+      //- 
+      label(for='number_in_stock') PRICE 
+      input(type='number' name='number_in_stock') 
+      //- 
+      input(type="file" name='image')
+      //- 
+      button SUBMIT
