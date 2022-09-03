@@ -104,6 +104,8 @@ form > input:focus {
 
 img {
   width: 300px;
+  height: 300px;
+  background-color: white;
 }
 
 .product-price {
