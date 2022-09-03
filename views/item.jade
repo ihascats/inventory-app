@@ -1,0 +1,29 @@
+extends layout
+
+block content 
+  div(class='wrapper item')
+    div(class='product')
+      img(src=`../images/${item.image}`, alt="")
+      div(class='product_info')
+        h2(class='product-name')= item.name
+        p(class='product-description')= item.description
+        a(href=`/inventory/sortBy-${item.category}`) 
+          h4(class='product-category')= item.category
+        h1(class='product-price')= `$${item.price}`
+
+    button(class='delete' data-doc=`${item._id}`) DELETE
+
+  script.
+    const del = document.querySelector('.delete')
+    del.onclick = () => {
+      const confirmPermissions = prompt("Input Admin Password");
+      if (confirmPermissions === 'qwertY'){
+        fetch(`/inventory/${del.dataset.doc}`, {
+          method: 'DELETE'
+        }).then(()=>{
+          window.location.href = '/inventory'
+        })
+      } else {
+        alert('Incorrect Password')
+      }
+    }

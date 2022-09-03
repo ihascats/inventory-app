@@ -13,7 +13,7 @@ mongoose.connect(
 );
 
 const indexRouter = require('./routes/index');
-const storeRouter = require('./routes/store');
+const inventoryRouter = require('./routes/inventory');
 const formRouter = require('./routes/form');
 
 const app = express();
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/store', storeRouter);
+app.use('/inventory', inventoryRouter);
 app.use('/new-item', formRouter);
 
 // catch 404 and forward to error handler

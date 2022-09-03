@@ -49,14 +49,14 @@ form {
   justify-content: center;
 }
 
-form > button {
+button {
   border: none;
   background-color: rgb(0 0 0 / 10%);
   font-size: 18px;
   padding: 8px;
 }
 
-form > button:hover {
+button:hover {
   background-color: rgb(0 0 0 / 30%);
 }
 
@@ -140,4 +140,11 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(316px, 0));
   gap: 16px;
   justify-content: center;
+}
+
+.item {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 48px 0 0 0;
 }
