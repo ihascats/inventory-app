@@ -11,12 +11,11 @@ block content
       label(for="description") DESCRIPTION
       input(type="text" name='description') 
       //- 
-      <label for="category">FOOD TYPE</label>
-      <select name="category">
-        <option value="dry">Dry</option>
-        <option value="moist">Moist</option>
-        <option value="wet">Wet</option>
-      </select>
+      label(for="category") FOOD TYPE
+      select(name="category")
+        option(value="dry") Dry
+        option(value="moist") Moist
+        option(value="wet") Wet
       //- 
       label(for='price') PRICE 
       input(type='number' name='price') 
