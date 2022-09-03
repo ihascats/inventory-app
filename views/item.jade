@@ -11,8 +11,8 @@ block content
           h4(class='product-category')= item.category
         h1(class='product-price')= `$${item.price}`
 
-    button(class='delete' data-doc=`${item._id}`) DELETE
     button(class='edit' data-doc=`${item._id}`) EDIT
+    button(class='delete' data-doc=`${item._id}`) DELETE
 
   script.
     const del = document.querySelector('.delete')
