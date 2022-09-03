@@ -40,7 +40,49 @@ router.post('/new-item-create', upload.single('image'), function (req, res) {
     });
     newItem.save();
   }
-  res.redirect('/');
+  res.redirect('/inventory');
+});
+
+router.post('/item-update-:id', upload.single('image'), function (req, res) {
+  if (req.file) {
+    Item.findByIdAndUpdate(
+      req.params.id,
+      {
+        name: req.body.name,
+        description: req.body.description,
+        category: req.body.category,
+        price: req.body.price,
+        number_in_stock: req.body.number_in_stock,
+        image: req.file.filename,
+      },
+      function (err, docs) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Updated Item : ', docs);
+        }
+      },
+    );
+  } else {
+    Item.findByIdAndUpdate(
+      req.params.id,
+      {
+        name: req.body.name,
+        description: req.body.description,
+        category: req.body.category,
+        price: req.body.price,
+        number_in_stock: req.body.number_in_stock,
+      },
+      function (err, docs) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Updated Item : ', docs);
+        }
+      },
+    );
+  }
+  res.redirect('/inventory');
 });
 
 module.exports = router;

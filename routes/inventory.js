@@ -12,6 +12,12 @@ router.get('/sortBy-:category', async function (req, res, next) {
   });
 });
 
+router.get('/item-update-:id', async function (req, res, next) {
+  res.render('update-item', {
+    item: await Item.findById(req.params.id),
+  });
+});
+
 router.get('/:id', async function (req, res, next) {
   res.render('item', {
     item: await Item.findById(req.params.id),

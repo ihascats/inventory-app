@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div(class='wrapper')
+    form(action=`/item-update-${item._id}`, method="post" enctype='multipart/form-data')
+      h1 NEW ITEM FORM
+      //- 
+      label(for="name") NAME
+      input(type="text" name='name' value= item.name) 
+      //- 
+      label(for="description") DESCRIPTION
+      input(type="text" name='description' value= item.description) 
+      //- 
+      label(for="category") FOOD TYPE
+      select(name="category" value= item.category)
+        option(value="dry") Dry
+        option(value="moist") Moist
+        option(value="wet") Wet
+      //- 
+      label(for='price') PRICE ($) 
+      input(type='number' name='price' min='0' value= item.price step='.01' ) 
+      //- 
+      label(for='number_in_stock') NUMBER IN STOCK
+      input(type='number' name='number_in_stock' min='0' value= item.number_in_stock) 
+      //- 
+      input(type="file" name='image')
+      //- 
+      button SUBMIT

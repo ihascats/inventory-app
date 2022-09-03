@@ -12,9 +12,12 @@ block content
         h1(class='product-price')= `$${item.price}`
 
     button(class='delete' data-doc=`${item._id}`) DELETE
+    button(class='edit' data-doc=`${item._id}`) EDIT
 
   script.
     const del = document.querySelector('.delete')
+    const edit = document.querySelector('.edit')
+    
     del.onclick = () => {
       const confirmPermissions = prompt("Input Admin Password");
       if (confirmPermissions === 'qwertY'){
@@ -27,3 +30,13 @@ block content
         alert('Incorrect Password')
       }
     }
+
+    edit.onclick = () => {
+      const confirmPermissions = prompt("Input Admin Password");
+      if (confirmPermissions === 'qwertY'){
+          window.location.href = `/inventory/item-update-${edit.dataset.doc}`
+      } else {
+        alert('Incorrect Password')
+      }
+    }
+
